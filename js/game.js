@@ -15,7 +15,7 @@ var game = {
 
                 {
                     text: "Keep on walking",
-                    nextLevel: "field",
+                    nextLevel: "home",
                 },
             ]
         },
@@ -40,7 +40,7 @@ var game = {
         sentMessage: {
             background_image: "",
             music: "",
-            message: "A frantic replicant appears onscreen. You don't understand it because it's talking so fast. But the last thing it says are some instructions.",
+            message: "Someone frantic appears onscreen. You don't comprehend what they're saying but at the end, they ask you if you're willing to follow what they say.",
             choices: [
                 {
                     text:"Follow instructions",
@@ -48,8 +48,8 @@ var game = {
                 },
                 
                 {
-                    text:"",
-                    nextLevel:"",
+                    text:"Leave",
+                    nextLevel:"home",
                 },
             ]
         },
@@ -57,7 +57,7 @@ var game = {
         backRoom: {
             background_image: "",
             music: "",
-            message: "You enter the back room and see a ",
+            message: "You enter the back room and see a broken replicant. What do you do?",
             choices: [
                 {
                     text:"",
@@ -70,10 +70,10 @@ var game = {
                 },
             ]
         },
-        field: {
+        home: {
             background_image: "",
             music: "",
-            message: "You made it safely home",
+            message: "You ignored it all and made it safely home",
             choices: [
                 {
                     text: "Start over",

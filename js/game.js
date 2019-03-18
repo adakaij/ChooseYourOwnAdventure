@@ -1,63 +1,59 @@
 // NOTE - You must have a level with the name "start".  This is used as the first level in the game.
 
 var game = {
-    background_image: "",
-    music: "",
+    background_image: "br-opening.jpg",
     levels: {
 
         start: {
-            message: "You see a blinking bright light in the alleyway",
+            message: "You're a truck driver doing your job, you suddenly get a message asking you if you would follow their instructions.",
             choices: [
                 {
-                    text: "Follow the light",
-                    nextLevel: "room",
+                    text: "Follow instructions",
+                    nextLevel: "intoTheCity",
                 },
 
                 {
-                    text: "Keep on walking",
-                    nextLevel: "home",
+                    text: "Ignore it",
+                    nextLevel: "safety",
                 },
             ]
         },
 
-        room: {
-            background_image: "",
-            music: "",
-            message: "You find yourself in an abandoned room, the bright light is coming from a screen. But suddenly a loud bang comes from the back room. What do you do?",
+        intoTheCity: {
+            background_image: "br-intocity.png",
+            message: "You have two options for destinations.",
             choices: [
                 {
-                    text: "Mess around with the computer",
-                    nextLevel: "sentMessage",
+                    text: "Go the alley",
+                    nextLevel: "alley",
                 },
                 
                 {
-                    text: "Explore the back room",
-                    nextLevel: "backRoom",
+                    text: "Go the junkyard",
+                    nextLevel: "yard",
                 },
             ]
         },
 
-        sentMessage: {
-            background_image: "",
-            music: "",
-            message: "Someone frantic appears onscreen. You don't comprehend what they're saying but at the end, they ask you if you're willing to follow what they say.",
+        alley: {
+            background_image: "br-alley.jpg",
+            message: "You're now on your feet wandering in an alley. Your instructions tell you that when you hear a call you'll answer it.",
             choices: [
                 {
-                    text:"Follow instructions",
+                    text:"",
+                    nextLevel:"room",
+                },
+                
+                {
+                    text:"",
                     nextLevel:"",
-                },
-                
-                {
-                    text:"Leave",
-                    nextLevel:"home",
                 },
             ]
         },
         
-        backRoom: {
-            background_image: "",
-            music: "",
-            message: "You enter the back room and see a broken replicant. What do you do?",
+        room: {
+            background_image: "br-room.jpg",
+            message: "",
             choices: [
                 {
                     text:"",
@@ -70,13 +66,40 @@ var game = {
                 },
             ]
         },
-        home: {
-            background_image: "",
-            music: "",
-            message: "You ignored it all and made it safely home",
+        
+        yard: {
+            background_image: "br-yard.jpg",
+            message: "",
             choices: [
                 {
-                    text: "Start over",
+                    text:"",
+                    nextLevel:"",
+                },
+                
+                {
+                    text:"",
+                    nextLevel:"",
+                },
+            ]
+        },
+        
+        blackout:{
+            background_image: "br-blackout.png",
+            message: "Suddenly, a citywide blackout occurs.",
+            choices: [
+                {
+                    text: "Play again?",
+                    nextLevel: "start",
+                },
+            ]
+        },
+        
+        safety: {
+            background_image: "br-shortend.jpg",
+            message: "Not much of a compelling story if you cut it short, does it?",
+            choices: [
+                {
+                    text: "Try again?",
                     nextLevel: "start",
                 },
             ]

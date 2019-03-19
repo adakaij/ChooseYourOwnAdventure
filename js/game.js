@@ -1,11 +1,11 @@
 // NOTE - You must have a level with the name "start".  This is used as the first level in the game.
 
 var game = {
-    background_image: "br-opening.jpg",
+    background_image: "br-start.jpg",
     levels: {
 
         start: {
-            message: "You're a truck driver doing your job, you suddenly get a message asking you if you would follow their instructions.",
+            message: "You're at your apartment and you recieve an call from an unknown source to send your truck to somewhere during your next shift. What do you do?",
             choices: [
                 {
                     text: "Follow instructions",
@@ -20,8 +20,8 @@ var game = {
         },
 
         intoTheCity: {
-            background_image: "br-intocity.png",
-            message: "You have two options for destinations.",
+            background_image: "br-into.jpg",
+            message: "While on the road you realized your destination could be either two places. Where do you go?",
             choices: [
                 {
                     text: "Go the alley",
@@ -36,56 +36,51 @@ var game = {
         },
 
         alley: {
-            background_image: "br-alley.jpg",
-            message: "You're now on your feet wandering in an alley. Your instructions tell you that when you hear a call you'll answer it.",
+            background_image: "br-alleyway.jpg",
+            message: "You get out of your truck and try to meet with a handler. Who do you approach?",
             choices: [
                 {
-                    text:"",
-                    nextLevel:"room",
+                    text:"The man with a coat?",
+                    nextLevel:"cutShort",
                 },
                 
                 {
-                    text:"",
-                    nextLevel:"",
-                },
-            ]
-        },
-        
-        room: {
-            background_image: "br-room.jpg",
-            message: "",
-            choices: [
-                {
-                    text:"",
-                    nextLevel:"",
-                },
-                
-                {
-                    text:"",
-                    nextLevel:"",
+                    text:"The man with a suit?",
+                    nextLevel:"cutShort",
                 },
             ]
         },
         
         yard: {
             background_image: "br-yard.jpg",
-            message: "",
+            message: "You meet a handler and they tell you to hand the keys over, what do you do?",
             choices: [
                 {
-                    text:"",
-                    nextLevel:"",
+                    text:"Hand over truck keys",
+                    nextLevel:"room",
                 },
                 
                 {
-                    text:"",
-                    nextLevel:"",
+                    text:"Refuse",
+                    nextLevel:"cutShort",
                 },
             ]
         },
         
-        blackout:{
-            background_image: "br-blackout.png",
-            message: "Suddenly, a citywide blackout occurs.",
+        room: {
+            background_image: "br-room.jpg",
+            message: "Your handler tells you to stay in this room and congrats your short mission is over! Now what?",
+            choices: [
+                {
+                    text:"Play from the start",
+                    nextLevel:"start",
+                },
+            ]
+        },
+        
+        cutShort:{
+            background_image: "br-cutShort.png",
+            message: "You really don't know how to keep yourself out of harm's way huh? You end here.",
             choices: [
                 {
                     text: "Play again?",
